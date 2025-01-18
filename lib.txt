@@ -1,0 +1,11 @@
+pip install torch 
+pip install torchvision 
+pip install facial-emotion-recognition
+
+
+Configuring Torch for CPU (./site-package/torch/serialization.py)
+
+Change:
+def load(f, map_location=None, pickle_module=pickle, **pickle_load_args):
+			                        to
+def load(f, map_location='cpu', pickle_module=pickle, **pickle_load_args):
